@@ -1,0 +1,440 @@
+.main {
+    display: flex;
+    margin-top: 3.125rem;
+
+    .top {
+        padding-right: 1.25rem;
+        border-right: 0.125rem solid #EBEBEB;
+
+        @include breakpoints-down(small) {
+            border: none;
+        }     
+
+        .content {
+
+            .box {
+                position: relative;
+
+                &__text {
+                    position: absolute;
+                    top: -1.25rem;
+                    left: 0.75rem;
+                    font-family: $body;
+                    font-size: 0.875rem;
+                    color: $lightGray;
+                }
+
+                &__categorie {
+                    position: absolute;
+                    top: -2.5rem;
+                    left: 0;
+                    font-family: $body;
+                    font-size: 0.875rem;
+                    color: $lightGray;
+                }
+
+                &__title {
+                    font-size: 2.5rem;
+                    font-weight: 500;
+
+                    @include breakpoints-down(small) {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                &__paragraph {
+                    margin: 1.25rem 0;
+                    font-size: 1rem;
+                    font-family: $body;
+                    color: $gray;
+                    text-align: justify;
+
+                }
+
+                &__img {
+                    
+                    width: 100%;
+                }
+            }
+        }
+
+        .middle {
+            width: 100%;
+            margin-top: 2.5rem;
+            border-top: 0.125rem solid #EBEBEB;
+
+            .caja {
+                display: flex;
+                gap: 1.25rem;
+
+                @include breakpoints-down(medium) {
+                    display: block;
+                }
+
+                .cartas {
+                    position: relative;
+                    margin-top: 3.125rem;
+                    width: 50%;
+
+                    @include breakpoints-down(medium) {
+                        width: 100%;
+                    }
+
+                    &__categorie {
+                        position: inherit;
+                        bottom: -0.75rem;
+                        font-family: $body;
+                        font-size: 0.875rem;
+                        color: $lightGray; 
+                    }
+
+                    &__text {
+                        display: block;
+                        position: inherit;
+                        left: 0.9375rem;
+                        padding-bottom: 0.625rem;           
+                        font-family: $body;
+                        font-size: 0.875rem;
+                        color: $lightGray;
+                    }
+
+                    &__img {
+                        width: 100%;
+                        max-height: 18.75rem;
+                        object-position: center;
+                        object-fit: cover;
+                    }
+
+                    &__titulo {
+                        padding-bottom: 1.25rem ;
+                        font-weight: 500;
+                        font-size: 1.5rem;
+                    }
+
+                    &__parrafo {
+                        max-width: 100%;
+                        font-family: $body;
+                        color: $gray;
+                    }
+                }
+            }
+            .oneline {
+                display: flex;
+                position: relative;
+                margin-top: 2.5rem;
+                padding-top: 3.125rem;
+                border-top: 0.125rem solid #EBEBEB;
+                gap: 1.25rem;
+
+                @include breakpoints-up(large) {
+                }
+
+                @include breakpoints-down(medium) {
+                    display: block;
+                }
+
+                &__content {
+                    max-width: 50%;
+                    
+                    @include breakpoints-up(large) {
+                        width: 100%; 
+                    }
+
+                    @include breakpoints-down(medium) {
+                        min-width: 100%;
+                    }
+                }
+                &__categorie {
+                    position: relative;
+                    bottom: -0.75rem;
+                    font-family: $body;
+                    font-size: 0.875rem;
+                    color: $lightGray; 
+                }
+
+                &__small {
+                    display: block;
+                    position: relative;
+                    left: 0.9375rem;
+                    padding-bottom: 0.625rem;           
+                    font-family: $body;
+                    font-size: 0.875rem;
+                    color: $lightGray;
+                }
+
+
+                &__img {
+                    width: 50%;
+                    max-height: 18.75rem;
+                    object-fit: cover;
+                    object-position: center;
+                    order: 2;
+
+                    @include breakpoints-up(large) {
+                        width: 100%; 
+                    }
+
+                    @include breakpoints-down(medium) {
+                        width: 100%;
+                    }
+                }   
+
+                &__title {
+                    font-weight: 500;
+                }
+
+                &__text {
+                    font-family: $body;
+                    color: $gray;
+                }
+            }
+
+            .bottom {
+                position: relative;
+                width: 100%;
+                margin-top: 2.5rem;
+                padding-top: 3.125rem;
+                border-top: 0.125rem solid #EBEBEB;
+                .contenedor {
+                    position: relative;
+                    width: 100%;
+                    gap: 1.875rem;
+
+                    @include breakpoints-down(medium) {
+                        display: block;
+                    }
+
+                    &__image {
+                        width: inherit;
+                        padding-bottom: 1.25rem;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+
+
+
+    .aside {
+        min-width: 18.75rem;
+        padding-left: 1.25rem;
+
+        @include breakpoints-up(xlarge) {
+            min-width: 28.125rem;
+        }
+
+        @include breakpoints-down(medium) {
+            min-width: 15.75rem;
+        }
+
+        @include breakpoints-down(small) {
+            display: none;
+        }
+
+        .container {
+            position: relative;
+
+
+            &__title {
+                margin-bottom:1.5rem;
+                padding: 0 0 1.625rem 2rem;
+                font-size: 2.2rem;
+                font-weight: 300;
+                border-bottom: 0.125rem solid #EBEBEB;
+
+                @include breakpoints-up(xlarge) {
+                    font-size: 3rem;
+                    padding: 0 0 1.625rem 2.125rem;
+                }
+
+                @include breakpoints-down(medium) {
+                    font-size: 1.8rem;
+                    padding: 0 0 1.625rem 1.675rem;
+                }
+
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0.5625rem;
+                    width: 1.5625rem;
+                    height: 1.5625rem;
+                    border-radius: 50%;
+
+                    @include breakpoints-up(xlarge) {
+                        width: 2.1875rem;
+                        height: 2.1875rem;
+                        top: 0.75rem;
+                    }
+
+                    @include breakpoints-down(medium) {
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        top: 0.5rem;
+                    }
+                }
+            }
+
+            .card {
+                position: relative;
+                width:100%;
+                border-bottom: 0.125rem solid #EBEBEB;
+                padding-bottom: 1rem;
+                
+                @include breakpoints-up(xlarge) {
+                    width: 100%;
+                }
+                
+                &__categorie--text {
+                    position: absolute;
+                    top: -0.25rem;
+                    left: 0.75rem;
+                    font-family: $body;
+                    font-size: 0.875rem;
+                    color: $lightGray;
+                }
+
+
+                &__title {
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    padding: 0.625rem 0;
+
+                    @include breakpoints-down(medium) {
+                        font-size: 1rem;
+                    }
+                }
+
+                &__update {
+                    display: block;
+                    padding-bottom: 0.625rem;
+                    font-family: $body;
+                    color: $lightGray;
+                }
+            }
+
+            .hide-m {
+
+                @include breakpoints-down(large) {
+                    display: none;
+                }
+
+                @include breakpoints-down(medium) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+}
+.footer {
+    width: 100%;
+    margin-top: 3.125rem;
+    padding-top: 3.125rem;
+    border-top: 0.125rem solid $lightBlue;
+
+    .contenido {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoints-up(xlarge) {
+            width: 90%;
+            margin: auto;
+        }
+
+        @include breakpoints-down(small) {
+            display: block;
+            
+        }
+
+        .social {
+            padding-right: 1.875rem;
+            height: max-content;
+
+            &__title {
+                width: min-content;
+                font-size: 2rem;
+                color: $black;
+
+                @include breakpoints-down(medium) {
+                    font-size: 1.5rem;
+                    
+                }
+            }
+        }
+
+        .social__icons {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1.875rem;
+        }
+
+        .social__icon {
+            padding-bottom: 0.9375rem;
+            font-family: $title;
+            font-weight: 500;
+            font-size: 1rem;
+            color: $black;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            @include breakpoints-down(medium) {
+                font-size: 0.975rem;
+                
+            }
+
+            ion-icon {
+                font-size: 1.2rem;
+                padding-right: 0.625rem;
+                color: $lightBlue;
+            }
+        }
+
+        .flex {
+            display: grid;
+            grid-template-columns: repeat(3, max-content);
+            gap: 3.75rem;
+
+            @include breakpoints-down(small) {
+                grid-template-columns: repeat(2, max-content);
+                gap: 2.5rem;
+            }
+
+            &-content {
+
+               @include breakpoints-up(xlarge) {
+                    &:not(:last-child) {
+                        margin-right: 8rem;
+                    }
+               }
+
+                .flex__up {
+                    padding-bottom: 0.625rem;
+                    font-size: 1rem;
+                    
+                    @include breakpoints-down(medium) {
+                        font-size: 0.975rem;
+                        
+                    }
+                }
+
+                .flex__li {
+                    padding-bottom: 0.325rem;
+                    font-family: $body;
+                    font-size: 0.875rem;
+                    color: $gray;
+
+                    @include breakpoints-down(medium) {
+                        font-size: 0.775rem;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

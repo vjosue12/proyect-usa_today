@@ -1,0 +1,140 @@
+.header {
+    margin-top: 1.875rem;
+    .navegation {
+        .nav {
+            display: flex;
+            position: relative;
+            &-left {
+                color: $black;
+                font-size: 2rem;
+                line-height: 1;
+                .left__search {
+                    color: $black;
+
+                    @include breakpoints-down(small) {
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+
+                @include breakpoints-down(small) {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .title {
+                margin: 0 auto;
+                position: relative;
+
+                &__text {
+                    font-family: 'Fira Sans', sans-serif;
+                    font-size: 2rem;
+                    line-height: 1;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        right: -0.6875rem;
+                        bottom: 0.5rem;
+                        width: 0.9375rem;
+                        height: 0.9375rem;
+                        border-radius: 50%;
+                        background-color: $lightBlue;
+                    }
+
+                    @include breakpoints-up(large) {
+                        font-size: 2.5rem;
+                    }
+
+                    @include breakpoints-up(xlarge) {
+                        font-size: 3rem;
+                    }
+
+                    @include breakpoints-down(small) {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+        
+        .navbar {
+            position: relative;
+            margin-top: 1.675rem;
+            border-top-width: 0.170rem;
+            border-top-style: solid;
+            border-bottom-width: 0.170rem;
+            border-bottom-style: solid;
+            .categories {
+
+                .content {
+                    display: flex;
+                    justify-content: center;
+                    &__li {
+                        padding: 0.925rem 0;
+                        font-size: 1rem;
+                        line-height: 1;
+
+                        &:hover {
+                            opacity: .5;
+                        }
+
+                        @include breakpoints-up(large) {
+                            font-size: 1.2rem;
+                        }
+
+                        @include breakpoints-down(small) {
+                            font-size: 0.9625rem;
+                        }
+
+                    }
+
+                    &__link {
+                        padding: 0 2rem;
+                        color: $black;
+                        font-family: $body;
+                        font-weight: bold;
+
+                        @include breakpoints-down(medium) {
+                            padding: 0 1rem;   
+                        }
+
+                        @include breakpoints-down(small) {
+                            padding: 0 0.425rem;
+                        }
+                    }
+                }
+            }
+
+
+
+
+
+            .weather {
+                display: block;
+
+                @include breakpoints-down(small) {
+                    display: none;
+                }
+
+                &__content {
+                    display: flex;
+                    position: absolute;
+                    right: 0;
+                    top: 1.21125rem;
+                    font-size: 1.2rem;
+                    line-height: 1;
+                }
+
+                &__sun {
+                    color: $yellow;
+                    margin-right: 0.625rem;
+                }
+
+                &__text {
+                    color: $gray;
+                }
+             }
+         }
+    }
+}
